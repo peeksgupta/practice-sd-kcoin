@@ -30,40 +30,40 @@ blockchain = [
 
 # 1. Variables to represent each user's balance + starting values as zero
 
-bens_balance = 0
-brians_balance = 0
-evans_balance = 0
-anthonys_balance = 0
+ben_balance = 0
+brian_balance = 0
+evan_balance = 0
+anthony_balance = 0
 
 # 2. "From transactions"
 for transaction in blockchain
 
 if transaction["from_user"] == "ben"
-  bens_balance = bens_balance - transaction["amount"]
+  ben_balance = ben_balance - transaction["amount"]
 elsif transaction["from_user"] == "brian"
-  brians_balance = brians_balance - transaction["amount"]
+  brian_balance = brian_balance - transaction["amount"]
 elsif transaction["from_user"] == "evan"
-  evans_balance = evans_balance - transaction["amount"]
+  evan_balance = evan_balance - transaction["amount"]
 elsif transaction["from_user"] == "anthony"
-  anthonys_balance = anthonys_balance - transaction["amount"]
+  anthony_balance = anthony_balance - transaction["amount"]
 end
 
 # 3. "To transactions"
 
 if transaction["to_user"] == "ben"
-  bens_balance = bens_balance + transaction["amount"]
+  ben_balance = ben_balance + transaction["amount"]
 elsif transaction["to_user"] == "brian"
-  brians_balance = brians_balance + transaction["amount"]
+  brian_balance = brian_balance + transaction["amount"]
 elsif transaction["to_user"] == "evan"
-  evans_balance = evans_balance + transaction["amount"]
+  evan_balance = evan_balance + transaction["amount"]
 elsif transaction["to_user"] == "anthony"
-  anthonys_balance = anthonys_balance + transaction["amount"]
+  anthony_balance = anthony_balance + transaction["amount"]
 end
 end
 
 # 4. Print the balances
 
-puts "Ben's KelloggCoin balance is #{bens_balance}"
-puts "Brian's KelloggCoin balance is #{brians_balance}"
-puts "Evan's KelloggCoin balance is #{evans_balance}"
-puts "Anthony's KelloggCoin balance is #{anthonys_balance}"
+puts "Ben's KelloggCoin balance is #{ben_balance}"
+puts "Brian's KelloggCoin balance is #{brian_balance}"
+puts "Evan's KelloggCoin balance is #{evan_balance}"
+puts "Anthony's KelloggCoin balance is #{anthony_balance}"
